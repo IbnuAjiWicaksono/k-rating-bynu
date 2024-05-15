@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/k-rating-bynu/static/css/main.75de2512.css",
+    "main.js": "/k-rating-bynu/static/js/main.cc80c96f.js",
+    "static/js/453.d9e54842.chunk.js": "/k-rating-bynu/static/js/453.d9e54842.chunk.js",
+    "static/media/logo.png": "/k-rating-bynu/static/media/logo.e722fde21c6796fe7df0.png",
+    "index.html": "/k-rating-bynu/index.html",
+    "main.75de2512.css.map": "/k-rating-bynu/static/css/main.75de2512.css.map",
+    "main.cc80c96f.js.map": "/k-rating-bynu/static/js/main.cc80c96f.js.map",
+    "453.d9e54842.chunk.js.map": "/k-rating-bynu/static/js/453.d9e54842.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75de2512.css",
+    "static/js/main.cc80c96f.js"
+  ]
+}
