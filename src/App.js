@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation,Navigate } from 'react-router-dom';
 import Navbar from './component/navbar';
 import Card from './pages/card';
 import Card2 from './pages/card2';
@@ -13,10 +13,10 @@ function App() {
       <Navbar />
       <div className={isHomePage ? '' : 'pt-16'}>
         <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="card" element={<Card />} />
-          <Route path="card2" element={<Card2 />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/card" element={<Card />} />
+          <Route path="/card2" element={<Card2 />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
     </div>

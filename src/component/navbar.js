@@ -4,15 +4,14 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo.png'
 
 const navigation = [
-  { name: 'Home', href: 'home', current: false },
-  { name: 'Kdrama', href: 'card', current: false },
-  { name: 'Kfilm', href: 'card2', current: false }
+  { name: 'Home', href: '/home', current: false },
+  { name: 'Kdrama', href: '/card', current: false },
+  { name: 'Kfilm', href: '/card2', current: false }
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
 
 export default function Navbar() {
   const location = useLocation();
@@ -24,7 +23,7 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2  hover:bg-white hover:text-yellow-500 text-bold' text-white hover:text-yellow-500 hover:font-semibold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2  hover:bg-white text-bold' text-white hover:text-yellow-500 hover:font-semibold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -49,7 +48,7 @@ export default function Navbar() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          location.pathname === item.href ? 'bg-gray-900 text-gray-950' : 'text-white hover:bg-violet-50 hover:font-semibold hover:text-yellow-500 text-bold',
+                          location.pathname === item.href ? 'bg-violet-50 text-yellow-500 font-semibold' : 'text-white hover:bg-violet-50 hover:font-semibold hover:text-yellow-500 text-bold',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={location.pathname === item.href ? 'page' : undefined}
@@ -71,7 +70,7 @@ export default function Navbar() {
                   as={Link}
                   to={item.href}
                   className={classNames(
-                    location.pathname === item.href ? 'bg-gray-900 text-gray-950' : 'text-white hover:bg-white hover:text-yellow-500 text-bold',
+                    location.pathname === item.href ? 'bg-violet-50 text-yellow-500 font-semibold' : 'text-white hover:bg-white hover:text-yellow-500 text-bold',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={location.pathname === item.href ? 'page' : undefined}
